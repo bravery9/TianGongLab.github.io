@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktest=self.webpackChunktest||[]).push([[776],{5513:e=>{e.exports=JSON.parse('{"label":"Hyper-V","permalink":"/blog/tags/hyper-v","allTagsPath":"/blog/tags","count":1}')}}]);

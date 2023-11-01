@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58.955" height="19.932" viewBox="0 0 58.955 19.932">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c81e2"/>
+      <stop offset="1" stop-color="#3175e6"/>
+    </linearGradient>
+  </defs>
+  <g id="logo" transform="translate(-1.688 -2.098)">
+    <g id="组_8" data-name="组 8" transform="translate(1.688 2.098)">
+      <path id="形状_4" data-name="形状 4" d="M1.688,2.1H15.976a6.289,6.289,0,0,1,6.29,4.868,8.966,8.966,0,0,1-.449,5.5,2.826,2.826,0,0,1-1.085,1.238l-2.475-3a5.279,5.279,0,0,0,.056-2.584,3.047,3.047,0,0,0-2.852-2.1h-6.2l1.577,1.165V21.644H6.116V6.012Z" transform="translate(-1.688 -2.098)" fill="url(#linear-gradient)"/>
+      <path id="形状_5" data-name="形状 5" d="M82.8,64.987l3.1,2.325a3.386,3.386,0,0,1-.437.41,8.349,8.349,0,0,1-6.1,1.536v-3.4A6.069,6.069,0,0,0,82.8,64.987Z" transform="translate(-67.322 -55.238)" fill="#71b4ff"/>
+    </g>
+    <text id="破壳" transform="translate(27.643 17.03)" fill="#323641" font-size="16" font-family="FZZCHJW--GB1-0, FZZhengHeiS-B-GB" letter-spacing="0.03em"><tspan x="0" y="0">破壳</tspan></text>
+  </g>
+</svg>
