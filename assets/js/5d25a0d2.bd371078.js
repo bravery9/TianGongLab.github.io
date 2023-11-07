@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktest=self.webpackChunktest||[]).push([[425],{1272:s=>{s.exports=JSON.parse('{"label":"Microsoft","permalink":"/blog/tags/microsoft","allTagsPath":"/blog/tags","count":2}')}}]);
