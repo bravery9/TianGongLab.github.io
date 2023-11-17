@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktest=self.webpackChunktest||[]).push([[4631],{1307:s=>{s.exports=JSON.parse('{"label":"Microsofe","permalink":"/blog/tags/microsofe","allTagsPath":"/blog/tags","count":1}')}}]);
