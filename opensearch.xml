@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>破壳漏洞挖掘平台文档系统</ShortName>
-  <Description>Search 破壳漏洞挖掘平台文档系统</Description>
+  <ShortName>破壳漏洞挖掘平台</ShortName>
+  <Description>Search 破壳漏洞挖掘平台</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">https://poc.qianxin.com/img/favicon.ico</Image>
   <Url type="text/html" method="get" template="https://poc.qianxin.com/search?q={searchTerms}"/>
