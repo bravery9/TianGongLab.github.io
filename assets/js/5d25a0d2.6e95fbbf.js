@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpoc_docs=self.webpackChunkpoc_docs||[]).push([[2425],{1272:s=>{s.exports=JSON.parse('{"label":"Microsoft","permalink":"/blog/tags/microsoft","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);

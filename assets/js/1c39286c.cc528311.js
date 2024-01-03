@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpoc_docs=self.webpackChunkpoc_docs||[]).push([[4972],{5072:a=>{a.exports=JSON.parse('{"label":"Datacon","permalink":"/blog/tags/datacon","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

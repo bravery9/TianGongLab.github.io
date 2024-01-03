@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktest=self.webpackChunktest||[]).push([[4972],{5072:a=>{a.exports=JSON.parse('{"label":"Datacon","permalink":"/blog/tags/datacon","allTagsPath":"/blog/tags","count":1}')}}]);
