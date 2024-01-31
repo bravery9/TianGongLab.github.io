@@ -43,7 +43,7 @@
 </ul>
 <p>二者关系为：SSH的数据包以Packet为单位发送，每一个Packet中包含多个block。</p>
 <p><img loading="lazy" src="https://poc.qianxin.com/assets/images/1aef72eb-b5cd-4f71-93de-b5ae9999deea-ee166e97f60d4cb9dcbf2f4a2f9443fe.png" width="1101" height="331" class="img_ev3q"></p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="22-cve-2008-5161-针对me的攻击">2.2 CVE-2008-5161 针对M&amp;E的攻击<a href="https://poc.qianxin.com/blog/tiangongarticle017#22-cve-2008-5161-%E9%92%88%E5%AF%B9me%E7%9A%84%E6%94%BB%E5%87%BB" class="hash-link" aria-label="2.2 CVE-2008-5161 针对M&amp;E的攻击的直接链接" title="2.2 CVE-2008-5161 针对M&amp;E的攻击的直接链接">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="22-cve-2008-5161-针对me的攻击介绍">2.2 CVE-2008-5161 针对M&amp;E的攻击介绍<a href="https://poc.qianxin.com/blog/tiangongarticle017#22-cve-2008-5161-%E9%92%88%E5%AF%B9me%E7%9A%84%E6%94%BB%E5%87%BB%E4%BB%8B%E7%BB%8D" class="hash-link" aria-label="2.2 CVE-2008-5161 针对M&amp;E的攻击介绍的直接链接" title="2.2 CVE-2008-5161 针对M&amp;E的攻击介绍的直接链接">​</a></h3>
 <p><em>注意：这个攻击思路其实在后来被证实为可能存在一定的问题，可能只有在某些理想化状态下能够使用。不过这个攻击实在是有趣，这边介绍一下这个攻击思路。</em></p>
 <p>这个漏洞是一篇发在<a href="https://ieeexplore.ieee.org/document/5207634" target="_blank" rel="noopener noreferrer">IEEE的文章</a>提出来的，这里有<a href="https://conferences.computer.org/sp/pdfs/sp/2009/oakland2009-01.pdf" target="_blank" rel="noopener noreferrer">链接</a>漏洞发生在ssh对于之前提到的<code>M&amp;E</code>实现过程中的问题，属于是协议的级别的问题。由于SSH通信过程中，通信数据会发生加密，所以SSH客户端在进行数据解析的时候前会按照Block解密，并且对数据进行一定的安全性检查。然而就是在安全检查中，形成了这个漏洞的利用点。接下来来看一下这些错误检查点：</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="221-ssh与出错审计">2.2.1 SSH与出错审计<a href="https://poc.qianxin.com/blog/tiangongarticle017#221-ssh%E4%B8%8E%E5%87%BA%E9%94%99%E5%AE%A1%E8%AE%A1" class="hash-link" aria-label="2.2.1 SSH与出错审计的直接链接" title="2.2.1 SSH与出错审计的直接链接">​</a></h4>
@@ -67,7 +67,7 @@
 </ol>
 <p>总结一下这几个check的行为，可以得出如下的现象：</p>
 <table><thead><tr><th>检查内容</th><th>检查未通过行为</th></tr></thead><tbody><tr><td>Packet Length</td><td>连接断开，并且发送一个错误信息</td></tr><tr><td>Block 是否 对齐</td><td>连接断开</td></tr><tr><td>输入长度是否过长</td><td>返回错误信息</td></tr><tr><td>检查均通过</td><td>持续等待</td></tr></tbody></table>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="23-ssh-中间人攻击">2.3 SSH 中间人攻击<a href="https://poc.qianxin.com/blog/tiangongarticle017#23-ssh-%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB" class="hash-link" aria-label="2.3 SSH 中间人攻击的直接链接" title="2.3 SSH 中间人攻击的直接链接">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="23-cve-2008-5161中间人攻击">2.3 CVE-2008-5161&nbsp;中间人攻击<a href="https://poc.qianxin.com/blog/tiangongarticle017#23-cve-2008-5161%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB" class="hash-link" aria-label="2.3 CVE-2008-5161&nbsp;中间人攻击的直接链接" title="2.3 CVE-2008-5161&nbsp;中间人攻击的直接链接">​</a></h3>
 <p>现在假设我们作为攻击者，能够从中间截获数据包。此时我们做出如下的假设：</p>
 <ul>
 <li>K为每一个block加解密使用的key</li>
@@ -121,7 +121,7 @@
 <p>可以看到，时间间隔变成一致的。这是因为SSH提供了一种基于时间的混淆技巧，让数据包的传输没有时间特征，从而避免了侧信道攻击。</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="三terrapin-attack-攻击详情">三、Terrapin Attack 攻击详情<a href="https://poc.qianxin.com/blog/tiangongarticle017#%E4%B8%89terrapin-attack-%E6%94%BB%E5%87%BB%E8%AF%A6%E6%83%85" class="hash-link" aria-label="三、Terrapin Attack 攻击详情的直接链接" title="三、Terrapin Attack 攻击详情的直接链接">​</a></h2>
 <p>完成了之前那么多的前情提要，终于可以开始介绍这个攻击了。这个攻击针对的是SSH握手阶段发起的，这边要仔细介绍一下SSH的握手阶段发生的事情：</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="31-ssh握手阶段">3.1 SSH握手阶段<a href="https://poc.qianxin.com/blog/tiangongarticle017#31-ssh%E6%8F%A1%E6%89%8B%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="3.1 SSH握手阶段��的直接链接" title="3.1 SSH握手阶段的直接链接">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="31-ssh握手阶段">3.1 SSH握手阶段<a href="https://poc.qianxin.com/blog/tiangongarticle017#31-ssh%E6%8F%A1%E6%89%8B%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="3.1 SSH握手阶段的直接链接" title="3.1 SSH握手阶段的直接链接">​</a></h3>
 <p>SSH从握手到建立加密通信信道的流程如下：</p>
 <p><img loading="lazy" src="https://poc.qianxin.com/assets/images/c775cdfe-4c27-486c-bd53-7c9f26582c24-23cd49d51725d9739c57a557fe47752f.png" width="923" height="722" class="img_ev3q"></p>
 <p><em>其中黑色的部分表示当前信道已经是加密信道了，从黑色部分开始，中间人就完全无法解析SSH通信的具体内容。</em></p>
