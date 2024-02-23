@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpoc_docs=self.webpackChunkpoc_docs||[]).push([[6331],{3189:a=>{a.exports=JSON.parse('{"label":"Vulnerability Pattern","permalink":"/blog/tags/vulnerability-pattern","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);
