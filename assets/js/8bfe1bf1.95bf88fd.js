@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpoc_docs=self.webpackChunkpoc_docs||[]).push([[5036],{11694:s=>{s.exports=JSON.parse('{"label":"Terrapin","permalink":"/blog/tags/terrapin","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

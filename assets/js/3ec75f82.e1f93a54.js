@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpoc_docs=self.webpackChunkpoc_docs||[]).push([[4066],{29151:s=>{s.exports=JSON.parse('{"label":"SAST","permalink":"/blog/tags/sast","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

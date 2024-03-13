@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpoc_docs=self.webpackChunkpoc_docs||[]).push([[6932],{95732:s=>{s.exports=JSON.parse('{"label":"SLP","permalink":"/blog/tags/slp","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
